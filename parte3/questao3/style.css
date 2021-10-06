@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+/* Navbar */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(118, 11, 168);
+}
+
+li {
+  float: left;
+  font-weight: 700;
+}
+
+#indent-nav {
+  padding: 14px 16px;
+  margin-left: 25px;
+  color: gold;
+}
+
+li a {
+  display: block;
+  margin-left: 25px;
+  color: white;
+  text-decoration: none;
+  padding: 14px 16px;
+}
+
+li a:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(118, 11, 168);
+}
+
+.navbar {
+  margin: 0 0 10px 0;
+}
+
+/* conteúdo */
+
+body {
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.form {
+  width: 55%;
+  background-color: rgba(197, 197, 197, 0.185);
+  color: rgb(0, 0, 0);
+  padding: 10px 0 15px 0;
+  border-radius: 15px;
+}
+
+.form p {
+  margin: 0 0 5px 30px;
+}
+
+h2 {
+  margin-left: 0px !important;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.158);
+}
+
+.form button {
+  width: 100px;
+  height: 30px;
+  background-color: rgb(118, 11, 168);
+  color: white;
+  border: 2px solid black;
+  border-radius: 7px;
+  /* margin: 5px 0 10px 270px; */
+}
+
+.form button:hover {
+  background-color: gold;
+  color: rgb(118, 11, 168);
+  font-weight: bold;
+}
+
+label {
+  display: flex;
+  margin: 0px 0px 3px 0px;
+}
+
+input {
+  margin: 0 0 10px 7px;
+  border-radius: 10px;
+  padding: 1px 5px;
+  width: 400px;
+  height: 30px;
+}
+
+.footer {
+  position: fixed absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px 0;
+  background-color: rgba(0, 0, 0, 0.856);
+  color: white;
+}
+
+.footer a {
+  text-decoration: none;
+  color: gold;
+}

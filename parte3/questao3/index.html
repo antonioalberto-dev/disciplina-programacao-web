@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Questão 3</title>
+  <!-- CSS: estilo externo -->
+  <link rel="stylesheet" href="style.css">
+  <!-- CSS: estilo interno  -->
+  <style>
+    .centralizar {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- navbar -->
+  <div class="navbar">
+    <ul>
+      <!-- CSS: estilo em linha -->
+      <li id='indent-nav'>Programação WEB</li>
+      <li style="float:right; margin-right: 15px;"><a href="https://www.ufam.edu.br/" target="_blank ">UFAM</a></li>
+      <li style="float:right">
+        <a href="https://ecampus.ufam.edu.br/ecampus/home/login" target="_blank">e-campus</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Conteúdo -->
+  <div class='centralizar'>
+    <!-- formulário utilizando elementos de formulário do HTML5 -->
+    <section class="form centralizar">
+      <form>
+        <h2>Dados pessoais</h2>
+        <p>Nome completo</p>
+        <label for="">
+          <input type="text" required>
+        </label>
+
+        <p>Data de nascimento</p>
+        <label for="">
+          <input type="date" id="email_addr" name="email_addr" required />
+        </label>
+
+        <p>E-mail</p>
+        <label for="">
+          <input type="email" required />
+        </label>
+
+        <p>Telefone</p>
+        <label for="">
+          <input type="tel" />
+        </label>
+
+        <h2>Dados para maratona</h2>
+        <p>Tamanho do colete de corrida</p>
+        <label for="">
+          <input type="text" required>
+        </label>
+
+        <p>Número do colete de corrida</p>
+        <label for="">
+          <input type="number" value="1" min="1" required>
+        </label>
+
+        <p>Cor do colete</p>
+        <label for="">
+          <input type="color" required>
+        </label>
+
+        <div class="centralizar">
+          <button type="submit">Salvar</button>
+        </div>
+
+      </form>
+    </section>
+
+    <br>
+
+    <!-- Formulário sem elementos do HMTL5 -->
+    <div class="form">
+      <form>
+        <div class="centralizar">
+
+          <h2>Dados pessoais</h2>
+          <p>Nome completo</p>
+          <label>
+            <input type="text">
+          </label>
+
+          <p>Data de nascimento</p>
+          <label>
+            <input type="text">
+          </label>
+
+          <p>E-mail</p>
+          <label>
+            <input type="text">
+          </label>
+
+          <p>Telefone</p>
+          <label>
+            <input type="text">
+          </label>
+
+          <h2>Dados para maratona</h2>
+          <p>Tamanho do colete de corrida</p>
+          <label>
+            <input type="text">
+          </label>
+
+          <p>Número do colete de corrida</p>
+          <label>
+            <input type="text">
+          </label>
+        </div>
+
+        <p>Cor do colete</p><br>
+        <label>
+          <p>Azul</p>
+          <input type="radio" name="cor" value="azul">
+          <p>Preto</p>
+          <input type="radio" name="cor" value="preto">
+          <p>Vermelho</p>
+          <input type="radio" name="cor" value="vermelho">
+        </label>
+
+        <div class="centralizar">
+          <button type="submit">Salvar</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <div class='footer'>Desenvolvido por <a href='https://github.com/antonioalberto-dev'>Antônio Alberto</a></div>
+</body>
+
+</html>
