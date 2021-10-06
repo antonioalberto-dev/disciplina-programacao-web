@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parte 4 - Questão 1</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/8e9483b7bc.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="grid">
+    <div class="box-login horizontal-middle vertical-middle">
+      <h2>Login</h2>
+      <form name='login' onSubmit='validateForm()'>
+        <label>
+          <p><i class="fas fa-user-astronaut"></i>Usuário</p>
+          <input type="text" name="user" />
+        </label>
+        <label>
+          <p><i class="fa fa-unlock-alt"></i>Senha</p>
+          <input type="password" name="password" />
+        </label>
+        <br>
+        <div class="horizontal-middle">
+          <button class='horizontal-middle' type="submit">Entrar</button>
+          <p><a href="#">Esqueceu a senha?</a></p>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <div class='footer'>Desenvolvido por <a href='https://github.com/antonioalberto-dev'>Antônio Alberto</a></div>
+  <script src="validate.js"></script>
+</body>
+
+</html>
