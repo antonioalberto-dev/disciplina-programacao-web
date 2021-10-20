@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Pet Shop</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="jquery.js"></script>
+
+</head>
+
+<body>
+  <h1>Pet Shop</h1>
+
+  <form>
+    <h2>Cadastro de Animais</h2>
+    <p><input type="text" id="nome" name="nome" class="name" placeholder="Nome do animal" /></p>
+    <p><input type="text" id="tipo" name="tipo" class="tipo" placeholder="Tipo" /></p>
+    <p><input type="text" id="raca" name="raca" class="raca" placeholder="Raça" /></p>
+    <p><input type="text" id="idade" name="idade" class="idade" placeholder="Idade" /></p>
+    <p><input type="text" id="sexo" name="sexo" class="sexo" placeholder="Sexo" /></p>
+    <p><input type="submit" value="Salvar" /></p>
+  </form>
+
+  <h2>Consulta por tipo</h2>
+  <p><input id="onde" name="onde" placeholder="Tipo" /></p>
+  <p><input type="button" id="mostre-me" value="Consultar" /></p>
+
+  <h2>Lista de contatos</h2>
+  <ul id="nome-lista">
+    <!-- atualiza a pagina -->
+  </ul>
+
+  <p>Clique no botão para recuperar dados em um banco de dados web sql.</p>
+
+  <button onclick="recuperar()">Pressione-me para ver todos</button>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 100%;
+  line-height: 1.4em
+}
+
+input, button {
+  width: 25em;
+  font-size: 100%;
+  padding: .25em
+}

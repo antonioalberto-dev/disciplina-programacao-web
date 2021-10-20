@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+* {
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0;
+}
+
+/* navbar */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(118, 11, 168);
+}
+
+li {
+  float: left;
+  font-weight: 700;
+}
+
+#indent-nav {
+  padding: 14px 16px;
+  margin-left: 25px;
+  color: gold;
+}
+
+li a {
+  display: block;
+  margin-left: 25px;
+  color: white;
+  text-decoration: none;
+  padding: 14px 16px;
+}
+
+li a:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(118, 11, 168);
+}
+
+.item-right {
+  float: right;
+}
+
+.item-disabled {
+  margin: 12px 0 0 40px;
+  color: gold;
+  text-shadow: 1px 2px 1px black;
+}
+
+/* container */
+
+.container {
+  margin: 20px 15px;
+}
+
+/* footer */
+
+.footer {
+  position: fixed absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px 0;
+  background-color: rgba(0, 0, 0, 0.856);
+  color: white;
+}
+
+.footer a {
+  text-decoration: none;
+  color: gold;
+}
+
+/* conteúdo */
+
+.box {
+  padding: 15px;
+  margin: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.342);
+  border-radius: 7px;
+  width: 500px;
+}
+
+.box-int {
+  width: 80%;
+  padding: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.342);
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+h3 {
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.178);
+}
+
+.center {
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+
+p {
+  margin: 5px, 0;
+}
