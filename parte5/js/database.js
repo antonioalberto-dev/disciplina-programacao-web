@@ -10,19 +10,19 @@ var db = openDatabase("petshop", "1.0", "Pet Shop", 32678);
 db.transaction(function (transaction) {
   transaction.executeSql("CREATE TABLE IF NOT EXISTS animais (" +
     "id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
-    "nome TEXT NOT NULL, idade INTEGER NOT NULL, raca TEXT, tipo TEXT NOT NULL);");
+    "nome TEXT NOT NULL, idade INTEGER NOT NULL, raca TEXT, especie TEXT NOT NULL);");
 });
 
 // Essa é a função salvar
-var salvarcontato = function (nome, idade, raca, tipo, successCallback) {
+var createAnimal = function (nome, idade, raca, especie, successCallback) {
   db.transaction(function (transaction) {
-    transaction.executeSql(("INSERT INTO animais (nome, idade, raca, tipo) VALUES (?, ?, ?, ?);"),
-      [nome, idade, raca, tipo], function (transaction, results) { successCallback(results); }, errCallback);
+    transaction.executeSql(("INSERT INTO animais (nome, idade, raca, especie) VALUES (?, ?, ?, ?);"),
+      [nome, idade, raca, especie], function (transaction, results) { successCallback(results); }, errCallback);
   });
 };
 
 // Esta é uma função de carga, que carrega todos os animais para um determinado local
-var carregacontato = function (nome, successCallback) {
+var selectAnimal = function (nome, successCallback) {
   db.transaction(function (transaction) {
     transaction.executeSql(("SELECT * FROM animais WHERE nome=?"), [nome],
       function (transaction, results) { successCallback(results); }, errCallback);
@@ -51,13 +51,13 @@ $(function () {
   // Substituir o formulário padrão apresentar em favor do nosso código
   form.submit(function (event) {
     event.preventDefault();
-    salvarcontato($('#nome').val(), $('#idade').val(), $('#raca').val(), $('#tipo').val(), function () {
+    createAnimal($('#nome').val(), $('#idade').val(), $('#raca').val(), $('#especie').val(), function () {
       alert("dados do contato " + $('#nome').val() + " salvos!");
     })
   });
 
   // Lista de animais vinculados a um botão na página
-  $('#mostre-me').click(function () { carregacontato($('#onde').val(), atualizapagina); });
+  $('#mostre-me').click(function () { selectAnimal($('#onde').val(), atualizapagina); });
 });
 
 function recuperar() {
