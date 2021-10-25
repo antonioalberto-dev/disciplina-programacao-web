@@ -1,50 +1,59 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 
 <head>
-  <meta charset="UTF-8" />
-  <title>Pet Shop</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/jquery.js"></script>
+    <meta charset="UTF-8">
+    <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js"></script>
+    <script src="banco.js"></script>
+    <title>Maratona Municipal de Corrida 2021</title>
 </head>
 
 <body>
-  <div class="centralizar">
+    <div class="centralizar">
+        <h1>Maratona Municipal de Corrida 2021</h1>
 
-    <!-- Módulo Cadastro -->
-    <h1>Pet Shop</h1>
-    <div class="container">
-      <form class="centralizar">
-        <h2>Cadastro de animais para castração</h2>
-        <input type="text" id="nome" name="nome" class="name" placeholder="Nome" />
-        <input type="text" id="especie" name="especie" class="especie" placeholder="Especie" />
-        <input type="text" id="idade" name="idade" class="idade" placeholder="Idade (em meses)" />
-        <input type="text" id="raca" name="raca" class="raca" placeholder="Raça" />
-        <button type="submit">Salvar</button>
-      </form>
+        <div class="container">
+            <div class="centralizar">
+                <h2>Consultar atletas por idade</h2>
+                <input type="text" id="id-consulta" placeholder="Informe a idade">
+                <button id="btn-cons">Consultar</button>
+                <div id="cons-div"></div>
+            </div>
+        </div>
+
+        <form class="container centralizar">
+
+            <input type="hidden" id="field-id" value="" />
+
+            <!-- <label for="field-nome">Nome</label> -->
+            <input type="text" id="field-nome" placeholder="Nome" />
+
+            <!-- <label for="field-idade">Idade</label> -->
+            <input type="text" id="field-idade" placeholder='Idade' />
+
+            <!-- <label for="field-endereco">Endereço</label> -->
+            <input type="text" id="field-endereco" placeholder="Endereço" />
+            <div>
+                <div class="per"><button id="btn-salvar">SALVAR</button></div>
+                <div class="per"><button id="btn-deletar">DELETAR</button></div>
+            </div>
+        </form>
+
+        <div class="container">
+            <table class="centralizar" id="table-register">
+                <thead>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Endereço</th>
+                    <th></th>
+                </thead>
+                <tbody id="tbody-register"></tbody>
+            </table>
+        </div>
+
     </div>
-
-    <div class="container">
-      <div class="centralizar">
-
-        <h2>Consulta por nome</h2>
-        <input id="onde" name="onde" placeholder="Nome do pet" />
-        <button type="button" id="mostre-me">Consultar</button>
-        <!-- <h2>Lista de contatos</h2> -->
-      </div>
-      <ul id="nome-lista">
-        <!-- atualiza a pagina -->
-      </ul>
-    </div>
-
-    <!-- Módulo recuperar dados do banco de dados -->
-    <!-- <div class="container centralizar">
-      <p>Clique no botão para recuperar dados em um banco de dados web sql.</p>
-      <button onclick="recuperar()">Pressione-me para ver todos</button>
-    </div> -->
-
-  </div>
-  <script src="js/database.js"></script>
 </body>
 
 </html>
