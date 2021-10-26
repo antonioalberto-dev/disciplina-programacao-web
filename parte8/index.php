@@ -13,12 +13,16 @@
   <div class="centralizar">
     <h1>Dados pessoais</h1>
     <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>" class="container" enctype="multipart/form-data">
-      <input type="text" name="nome" placeholder="Nome">
-      <input type="number" name="idade" placeholder="Idade">
-      <input type="text" name="endereco" placeholder="Endereco"><br>
 
-      <input type="file" name="arquivo">
-      <button type="submit" name="enviar-formulario">Salvar</button>
+      <div class="centralizar">
+        <input type="text" name="nome" placeholder="Nome">
+        <input type="number" name="idade" placeholder="Idade">
+        <input type="text" name="endereco" placeholder="Endereço">
+
+        <label for="selecao-arquivo">Selecionar um arquivo</label>
+        <input type="file" id="selecao-arquivo" name="arquivo" class="input-file">
+        <button type="submit" name="enviar-formulario">Salvar</button>
+      </div>
     </form>
   </div>
 </body>
