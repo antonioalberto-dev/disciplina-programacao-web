@@ -9,7 +9,7 @@ function carregado() {
     document.getElementById('btn-cons').addEventListener('click', consultaIndividual);
 
     db.transaction(function (tx) {
-        tx.executeSql("CREATE TABLE IF NOT EXISTS myTable ( id INTEGER PRIMARY KEY,nome TEXT,idade TEXT, endereco TEXT)");
+        tx.executeSql("CREATE TABLE IF NOT EXISTS myTable ( id INTEGER PRIMARY KEY, nome TEXT, idade TEXT, endereco TEXT)");
     });
 
     mostrar();
@@ -83,9 +83,9 @@ function mostrar() {
             for (var i = 0; i < rows.length; i++) {
                 tr += '<tr>';
                 tr += '<td>' + rows[i].nome + '</td>';
-                tr += '<td>' + rows[i].idade + '</td>';
+                tr += '<td>' + rows[i].idade + ' anos </td>';
                 tr += '<td>' + rows[i].endereco + '</td>';
-                tr += '<td onClick="atualizar(' + rows[i].id + ')">' + "<img src='https://img.icons8.com/external-becris-lineal-becris/30/000000/external-edit-mintab-for-ios-becris-lineal-becris.png'/>" + '</td>';
+                tr += '<td onClick="atualizar(' + rows[i].id + ')">' + "<img src='https://img.icons8.com/external-becris-lineal-becris/30/FFFFFF/external-edit-mintab-for-ios-becris-lineal-becris.png'/>" + '</td>';
                 tr += '</tr>';
             }
             table.innerHTML = tr;
@@ -106,7 +106,7 @@ function consultaIndividual() {
             var tr = '';
             for (var i = 0; i < rows.length; i++) {
                 tr += '<ul>';
-                tr += '<li>' + rows[i].nome + ' | ' + rows[i].idade + ' | ' + rows[i].endereco + '</li>';
+                tr += '<li>' + rows[i].nome + ' | ' + rows[i].idade + ' anos | ' + rows[i].endereco + '</li>';
                 tr += '</ul>';
             }
             element.innerHTML = tr;
