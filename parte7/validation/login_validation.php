@@ -10,11 +10,11 @@ if ($result->num_rows > 0) {
   while ($row = $result->fetch_assoc()) {
     echo "<script> 
       alert('Login efetuado com sucesso!');
-      window.location='users.php';
+      window.location='../users.php';
     </script>";
   }
 } else
   echo "<script> 
     alert('Falha ao efetuar login!'); 
-    window.location='index.php';
+    window.location='../index.php';
   </script>";

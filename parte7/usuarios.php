@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/users-style.css">
   <link rel="stylesheet" href="css/navbar.css">
   <title>Usuários</title>
 </head>
@@ -20,7 +19,7 @@
         <?php
         include 'utils/connection.php';
 
-        $sql = "SELECT * FROM user_login";
+        $sql = "SELECT * FROM usuarios";
         $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
         if ($result->num_rows > 0) {
@@ -37,8 +36,8 @@
           while ($row = $result->fetch_assoc()) :
             echo "<tr>
       <td>" . $row["cpf"] . "</td>
-      <td>" . $row["firstname"] . "</td>
-      <td>" . $row["surname"] . "</td>
+      <td>" . $row["nome"] . "</td>
+      <td>" . $row["sobrenome"] . "</td>
       </tr>";
           endwhile;
 

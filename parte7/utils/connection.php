@@ -2,7 +2,7 @@
 # Substitua abaixo os dados, de acordo com o banco criado
 $user = "root";
 $password = "";
-$database = "login_prog_web";
+$database = "projeto_login";
 $host = "localhost";
 
 // realiza a conexão com o servidor banco de dados
