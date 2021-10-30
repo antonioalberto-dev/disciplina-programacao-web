@@ -11,16 +11,23 @@ $u = new Usuario;
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastro</title>
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/navbar.css">
-  <link rel="stylesheet" href="css/stylee.css">
 </head>
 
 <body>
-  <?php include 'utils/navbar.php' ?>
-  <div class="wrapper">
-    <div class="box-login">
-      <div class="h-center">
-        <h3>Cadastre-se</h3>
+  <nav id="menu-h">
+    <ul>
+      <li><a href="cadastrar.php">Cadastre-se</a></li>
+      <li><a href="usuarios.php">Usuários</a></li>
+      <li><a href="index.php">Entrar</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="">
+      <div class="centralizar">
+        <h1>Cadastre-se</h1>
         <form method="POST" class="h-center">
           <input type="cpf" name="cpf" id="cpf" placeholder="CPF" />
           <input type="text" name="nome" id="nome" placeholder="Nome" />
@@ -28,8 +35,8 @@ $u = new Usuario;
           <input type="password" name="senha" id="senha" placeholder="Senha" />
           <input type="password" name="confirmaSenha" id="confirmaSenha" placeholder="Confirme sua senha" />
           <br>
-          <div class="h-center">
-            <button type="submit">Salvar</button>
+          <div class="centralizar">
+            <input type="submit" value="Salvar">
           </div>
         </form>
       </div>
@@ -37,6 +44,7 @@ $u = new Usuario;
   </div>
 
   <?php
+  include 'validation/validacaoCPF.php';
   // verificar se clicou no botão
   if (isset($_POST['nome'])) {
     $cpf = addslashes($_POST['cpf']);
@@ -46,19 +54,27 @@ $u = new Usuario;
     $confirmaSenha = addslashes($_POST['confirmaSenha']);
     // verifica se esta preenchido
     if (!empty($nome) && !empty($sobrenome) && !empty($senha) && !empty($confirmaSenha)) {
-      $u->conectar("projeto_login", "localhost", "root", "");
-      if ($u->msgErro == '') {
-        if ($senha == $confirmaSenha) {
-          if ($u->cadastrar($cpf, $nome, $sobrenome, $senha)) {
-            echo "<div class='msgSuccess'>Cadastrado com sucesso! Acesse para entrar!</div>";
+      if (validaCPF($cpf)) {
+        if (strlen($senha) >= 6) {
+          $u->conectar("projeto_login", "localhost", "root", "");
+          if ($u->msgErro == '') {
+            if ($senha == $confirmaSenha) {
+              if ($u->cadastrar($cpf, $nome, $sobrenome, $senha)) {
+                echo "<div class='msgSuccess'>Cadastrado com sucesso! Acesse para entrar!</div>";
+              } else {
+                echo "<div class='msgErro'>Usuário já cadastrado!</div>";
+              }
+            } else {
+              echo "<div class='msgErro'>Senhas não conrrespondem!</div>";
+            }
           } else {
-            echo "<div class='msgErro'>Usuário já cadastrado!</div>";
+            echo "<div class='msgErro'>Error: " . $u->msgErro . "</div>";
           }
         } else {
-          echo "<div class='msgErro'>Senhas não conrrespondem!</div>";
+          echo "<div class='msgErro'>Senha deve conter pelo menos 6 caracteres!</div>";
         }
       } else {
-        echo "<div class='msgErro'>Error: " . $u->msgErro . "</div>";
+        echo "<div class='msgErro'>CPF inválido!</div>";
       }
     } else {
       echo "<div class='msgErro'>Preencha todos os campos!</div>";

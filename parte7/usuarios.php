@@ -6,12 +6,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/table.css">
   <title>Usuários</title>
 </head>
 
 <body>
 
-  <?php include 'utils/navbar.php' ?>
+  <nav id="menu-h">
+    <ul>
+      <li><a href="cadastrar.php">Cadastre-se</a></li>
+      <li><a href="usuarios.php">Usuários</a></li>
+      <li><a href="index.php">Entrar</a></li>
+    </ul>
+  </nav>
 
   <div class="wrapper">
     <div class="box-login">

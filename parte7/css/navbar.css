@@ -1,37 +1,39 @@
-/* Navbar */
-
-ul {
-  list-style-type: none;
-  margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+* {
+  margin: 0 auto;
   padding: 0;
-  overflow: hidden;
-  background-color: rgb(118, 11, 168);
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
 }
 
-li {
-  float: left;
-  font-weight: 700;
+#menu-h {
+  background-color: rgb(37, 37, 39);
+  margin-bottom: 40px;
 }
 
-#indent-nav {
-  padding: 14px 16px;
-  margin-left: 25px;
-  color: gold;
+#menu-h ul {
+  max-width: 800px;
+  list-style: none;
+  padding: 0;
 }
 
-li a {
-  display: block;
-  margin-left: 25px;
-  color: white;
+#menu-h ul li {
+  display: inline;
+}
+
+#menu-h ul li a {
+  color: #FFF;
+  padding: 20px;
+  display: inline-block;
   text-decoration: none;
-  padding: 14px 16px;
+  transition: background .4s;
 }
 
-li a:hover {
-  background-color: rgb(255, 255, 255);
-  color: rgb(118, 11, 168);
+#menu-h ul li a:hover {
+  background-color: rgb(24, 139, 233);
 }
 
-.navbar {
-  margin: 0 0 10px 0;
+#menu-h ul li:last-child a {
+  float: right;
+  background-color: rgb(24, 139, 233);
 }
